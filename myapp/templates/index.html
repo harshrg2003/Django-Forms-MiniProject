@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">
+        <a href="/form/create/">Click here to fill the form for adding records</a>
+    </h1>
+    {% for post in posts %}
+    <p>{{post.title}}</p>
+
+    <div style="width: 300px; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: 0.3s; background: linear-gradient(to right, #ffecd2, #fcb69f); overflow: hidden;">
+        <div style="padding: 10px; background-color: rgba(255, 255, 255, 0.8); border-bottom: 1px solid #eee; text-align: center;">
+            <h2 style="margin: 0; font-size: 1.5em;">title</h2>
+            </div>
+            <div style="padding: 20px; text-align: center;">
+                <p style="margin: 0;">{{post.content}} </p>
+                
+                <br>
+                <p style="color: gray;">{{post.author}}</p>
+                </div>
+                </div>
+    {% endfor %}
+                
+                
+                
+                </body>
+                </html>
