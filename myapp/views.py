@@ -11,8 +11,6 @@ def create_post(request):
     if request.method=="POST":
         form=UploadForm(request.POST)
         if form.is_valid():
-            temp=form.save(commit=False)
-            temp.author=User.objects.get_by_natural_key(form['author'])
-            temp.save()
-        return redirect('home') 
+            form.save()
+        return redirect('/home') 
     return render(request,"Forms.html",{"form":UploadForm})   
